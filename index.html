@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0A1F44" />
+    <meta
+      name="description"
+      content="Welcome to Mater Dei Cathedral Parish. A Place of Excellence"
+    />
+    <title>Mater Dei Cathedral Parish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              parish: {
+                blue: "#0A1F44",
+                red: "#B52D43",
+                ivory: "#F8F6F0",
+                gold: "#D4AF37",
+              },
+            },
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+              display: ["Montserrat", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="font-sans antialiased text-slate-900">
+    <header class="site-header absolute inset-x-0 top-0 z-20">
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12"
+        aria-label="Main navigation"
+      >
+        <a
+          href="index.html"
+          class="brand flex items-center gap-3"
+          aria-label="Mater Dei Cathedral Parish home"
+        >
+          <img
+            src="assets/mater-dei-logo.jpg"
+            alt="Mater Dei Cathedral Parish logo"
+            class="brand-logo h-12 w-12 rounded-full object-cover sm:h-14 sm:w-14"
+          />
+          <span class="leading-tight text-white"
+            ><span class="block font-display text-lg font-semibold sm:text-xl"
+              >Mater Dei</span
+            ><span
+              class="block text-[0.65rem] font-semibold uppercase tracking-[0.19em] text-white/75 sm:text-xs"
+              >Cathedral Parish</span
+            ></span
+          >
+        </a>
+        <button
+          id="menu-toggle"
+          class="menu-toggle rounded-md p-2 text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-parish-gold lg:hidden"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          aria-label="Open navigation menu"
+        >
+          <svg
+            class="h-7 w-7"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+        <div
+          id="site-menu"
+          class="site-menu hidden lg:flex lg:items-center lg:gap-6"
+        >
+          <a class="nav-link" href="index.html" aria-current="page">Home</a>
+          <a class="nav-link" href="pages/about.html">About</a>
+          <a class="nav-link" href="pages/mass-times.html">Mass Times</a>
+          <a class="nav-link" href="pages/parish-life.html">Parish Life</a>
+          
+          <a class="nav-link" href="pages/contact.html">Contact</a>
+          <a class="nav-cta" href="pages/mass-times.html"
+            >Plan your visit <span aria-hidden="true">→</span></a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="hero relative flex min-h-[100svh] items-center overflow-hidden"
+        aria-labelledby="hero-title"
+      >
+        <img
+          class="hero-image absolute inset-0 h-full w-full object-cover"
+          src="assets/cathedral-front.jpg"
+          alt="The exterior of Mater Dei Cathedral"
+          fetchpriority="high"
+        />
+        <div class="hero-shade absolute inset-0" aria-hidden="true"></div>
+        <div
+          class="hero-content relative z-10 mx-auto w-full max-w-7xl px-6 pb-14 pt-32 sm:px-10 lg:px-16"
+        >
+          <p
+            class="mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-white/90 sm:text-sm"
+          >
+            <span class="h-px w-10 bg-parish-gold"></span> A Place of Excellence
+          </p>
+          <h1
+            id="hero-title"
+            class="max-w-4xl font-display text-5xl font-medium leading-[1.08] text-white sm:text-6xl lg:text-7xl"
+          >
+            Welcome to<br /><span class="text-[#F2D675]">Mater Dei</span>
+            Cathedral
+          </h1>
+          <p
+            class="mt-6 max-w-xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8"
+          >
+            A community united in faith, hope and love. We look forward to
+            welcoming you into the life of our parish.
+          </p>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:gap-4">
+            <a href="pages/mass-times.html" class="button-primary"
+              >Explore Mass times <span aria-hidden="true">→</span></a
+            >
+            <a href="pages/about.html" class="button-secondary"
+              >Discover our parish</a
+            >
+          </div>
+        </div>
+        <div
+          class="hero-bottom absolute inset-x-0 bottom-0 z-10 flex items-center justify-between px-6 py-5 text-[0.65rem] font-medium uppercase tracking-[0.2em] text-white/80 sm:px-10 lg:px-16"
+        >
+          <span>Worship · Community · Service</span
+          ><a href="#welcome" class="hidden items-center gap-2 md:flex"
+            >Scroll to explore <span class="text-parish-gold">↓</span></a
+          >
+        </div>
+      </section>
+      <section id="welcome" class="quick-access" aria-labelledby="quick-access-title">
+        <div class="quick-access-inner">
+          <div class="quick-access-heading">
+            <p class="section-eyebrow"><span></span> Find your place</p>
+            <h2 id="quick-access-title">A place to begin</h2>
+            <p class="quick-access-intro">Whether this is your first visit or you are part of our parish family, we are glad you are here.</p>
+          </div>
+          <div class="quick-access-grid">
+            <a class="quick-card" href="pages/mass-times.html"><span class="quick-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l3.5 2"/></svg></span><span class="quick-card-copy"><strong>Mass Times</strong><span>Join us in worship</span></span><span class="quick-card-arrow" aria-hidden="true">↗</span></a>
+            <a class="quick-card" href="pages/parish-life.html"><span class="quick-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.3"/><path stroke-linecap="round" stroke-linejoin="round" d="M3.5 19v-1.2A4.8 4.8 0 0 1 8.3 13h1.4a4.8 4.8 0 0 1 4.8 4.8V19zm12-5.6a4 4 0 0 1 5 3.9V19h-4"/></svg></span><span class="quick-card-copy"><strong>Parish Life</strong><span>Grow with our community</span></span><span class="quick-card-arrow" aria-hidden="true">↗</span></a>
+            <a class="quick-card" href="pages/events.html"><span class="quick-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path stroke-linecap="round" d="M7.5 3v4M16.5 3v4M3.5 9.5h17"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15 2 2 4-4"/></svg></span><span class="quick-card-copy"><strong>Parish Events</strong><span>See what is happening</span></span><span class="quick-card-arrow" aria-hidden="true">↗</span></a>
+            <a class="quick-card" href="pages/contact.html"><span class="quick-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="quick-card-copy"><strong>Visit Us</strong><span>Get in touch or find us</span></span><span class="quick-card-arrow" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+      <section class="parish-welcome" aria-labelledby="parish-welcome-title">
+        <div class="parish-welcome-inner">
+          <div class="welcome-photo-wrap">
+            <img class="welcome-photo" src="assets/cathedral-interior-3.jpeg" alt="The sanctuary and altar inside Mater Dei Cathedral" loading="lazy" />
+            <span class="welcome-photo-caption">A place of prayer and worship</span>
+          </div>
+          <div class="welcome-copy">
+            <p class="section-eyebrow"><span></span> Welcome to our parish</p>
+            <h2 id="parish-welcome-title">Faith that brings us together.</h2>
+            <p>At Mater Dei Cathedral Parish, we come together to worship, celebrate the sacraments, and support one another in faith. Whether you are visiting for the first time or returning home, there is a place for you here.</p>
+            <a class="welcome-link" href="pages/about.html">Discover our parish <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+      <section class="worship-section" aria-labelledby="worship-title">
+        <div class="worship-inner">
+          <div class="worship-heading">
+            <p class="section-eyebrow"><span></span> Worship &amp; sacraments</p>
+            <h2 id="worship-title">Rooted in faith. United in Christ.</h2>
+            <p>Gather with us in worship and discover the sacramental life of the Church.</p>
+          </div>
+          <div class="worship-grid">
+            <a class="worship-card" href="pages/mass-times.html">
+              <span class="worship-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4v24M8 11h16M10 11l-5 9h10l-5-9Zm12 0-5 9h10l-5-9Z"/><path d="M10 25h12"/></svg></span>
+              <span class="worship-card-title">Holy Mass</span><span class="worship-card-text">Come together at the table of the Lord.</span><span class="worship-card-link">View Mass times <b aria-hidden="true">→</b></span>
+            </a>
+            <a class="worship-card" href="pages/sacraments.html#reconciliation">
+              <span class="worship-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4v24M10 10h12M11 28h10"/><path d="M8 17a8 8 0 1 0 16 0"/><path d="M12 20c1.2 1.5 2.5 2 4 2s2.8-.5 4-2"/></svg></span>
+              <span class="worship-card-title">Reconciliation</span><span class="worship-card-text">Find peace and renewal in God’s mercy.</span><span class="worship-card-link">About the sacrament <b aria-hidden="true">→</b></span>
+            </a>
+            <a class="worship-card" href="pages/sacraments.html#baptism">
+              <span class="worship-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4c-3 4-7 8-7 13a7 7 0 0 0 14 0c0-5-4-9-7-13Z"/><path d="M12 19c.5 1.5 1.7 2.3 3.5 2.5"/></svg></span>
+              <span class="worship-card-title">Baptism</span><span class="worship-card-text">Celebrate new life in the family of God.</span><span class="worship-card-link">About the sacrament <b aria-hidden="true">→</b></span>
+            </a>
+            <a class="worship-card" href="pages/sacraments.html#marriage">
+              <span class="worship-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="16" r="7"/><circle cx="20" cy="16" r="7"/></svg></span>
+              <span class="worship-card-title">Marriage</span><span class="worship-card-text">Celebrate the vocation of Christian marriage.</span><span class="worship-card-link">About the sacrament <b aria-hidden="true">→</b></span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="life-section" aria-labelledby="life-title">
+        <div class="life-inner">
+          <div class="life-heading">
+            <p class="life-eyebrow"><span></span> Life at Mater Dei <span></span></p>
+            <h2 id="life-title">Faith is lived together.</h2>
+            <p>Our parish life is shaped by prayer, fellowship, and care for one another.</p>
+          </div>
+          <div class="life-grid">
+            <article class="life-card">
+              <span class="life-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M16 5v22M10 12h12M11 27h10"/><path d="M8 18a8 8 0 0 0 16 0"/></svg></span>
+              <h3>Prayer</h3><p>We come together to pray, worship, and celebrate the Eucharist.</p>
+            </article>
+            <article class="life-card">
+              <span class="life-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="11" r="4"/><circle cx="22" cy="13" r="3"/><path d="M4 26v-2a8 8 0 0 1 16 0v2zm15-7a6 6 0 0 1 9 5v2h-6"/></svg></span>
+              <h3>Community</h3><p>We make room for friendship, welcome, and belonging across generations.</p>
+            </article>
+            <article class="life-card">
+              <span class="life-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 27s-11-6-11-14a6 6 0 0 1 11-3 6 6 0 0 1 11 3c0 8-11 14-11 14Z"/><path d="M10 17h4l2-4 3 7 2-3h2"/></svg></span>
+              <h3>Service</h3><p>Our faith calls us to show kindness and care for our neighbors.</p>
+            </article>
+          </div>
+          <a class="life-link" href="pages/parish-life.html">Explore parish life <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+      <section class="events-section" aria-labelledby="events-title">
+        <div class="events-inner">
+          <div class="events-heading">
+            <div>
+              <p class="section-eyebrow"><span></span> Stay connected</p>
+              <h2 id="events-title">Upcoming at Mater Dei</h2>
+            </div>
+            <a class="events-all-link" href="pages/events.html">All parish events <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="events-empty">
+            <span class="events-calendar-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="22" height="20" rx="2"/><path d="M10 4v6M22 4v6M5 13h22"/><path d="M12 18h.01M16 18h.01M20 18h.01M12 22h.01M16 22h.01"/></svg></span>
+            <div class="events-empty-copy">
+              <h3>Parish events will be shared here.</h3>
+              <p>Check back for upcoming celebrations, gatherings, and ways to take part in parish life.</p>
+            </div>
+            <a class="events-empty-link" href="pages/events.html">Visit the events page <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+      <section class="gallery-section" aria-labelledby="gallery-title">
+        <div class="gallery-inner">
+          <div class="gallery-heading">
+            <div>
+              <p class="section-eyebrow"><span></span> Our cathedral</p>
+              <h2 id="gallery-title">A closer look at Mater Dei.</h2>
+            </div>
+            <a class="gallery-all-link" href="pages/gallery.html">View the gallery <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-item"><img src="assets/MDCP.jpg" alt="The front of Mater Dei Cathedral beneath a blue sky" loading="lazy"/><figcaption>Our cathedral</figcaption></figure>
+            <figure class="gallery-item"><img src="assets/cathedral-interior-1.jpeg" alt="The cathedral sanctuary and seating" loading="lazy"/><figcaption>The sanctuary</figcaption></figure>
+            <figure class="gallery-item"><img src="assets/cathedral-interior-2.jpeg" alt="An elevated view of the cathedral interior" loading="lazy"/><figcaption>A place of prayer</figcaption></figure>
+            <figure class="gallery-item"><img src="assets/cathedral-interior-3.jpeg" alt="The altar and sanctuary of Mater Dei Cathedral" loading="lazy"/><figcaption>At the altar</figcaption></figure>
+            <figure class="gallery-item"><img src="assets/cathedral-side-exterior.jpg" alt="The side exterior of Mater Dei Cathedral" loading="lazy"/><figcaption>Another view of the Cathedral</figcaption></figure>
+            <figure class="gallery-item"><img src="assets/altar-crucifix.jpg" alt="The crucifix above the altar inside Mater Dei Cathedral" loading="lazy"/><figcaption>The crucifix above the altar</figcaption></figure>          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-main">
+          <a class="footer-brand" href="index.html" aria-label="Mater Dei Cathedral Parish home">
+            <img src="assets/mater-dei-logo.jpg" alt="" width="52" height="52" />
+            <span><strong>Mater Dei</strong><small>Cathedral Parish</small></span>
+          </a>
+          <p class="footer-welcome">A place of excellence. Rooted in faith and united in Christ, we look forward to welcoming you.</p>
+        </div>
+        <nav class="footer-column" aria-label="Explore">
+          <h2>Explore</h2>
+          <a href="pages/about.html">About the parish</a>
+          <a href="pages/parish-life.html">Parish life</a>
+          <a href="pages/events.html">Events</a>
+          <a href="pages/gallery.html">Gallery</a>
+        </nav>
+        <nav class="footer-column" aria-label="Worship">
+          <h2>Worship</h2>
+          <a href="pages/mass-times.html">Mass times</a>
+          <a href="pages/sacraments.html">Sacraments</a>
+          <a href="pages/sacraments.html#reconciliation">Reconciliation</a>
+        </nav>
+        <div class="footer-column footer-contact">
+          <h2>We’re glad you’re here</h2>
+          <p>Have a question or planning a visit? We’d be happy to hear from you.</p>
+          <a class="footer-contact-link" href="pages/contact.html">Contact the parish <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>© <span id="current-year">2026</span> Mater Dei Cathedral Parish</p><span>Worship · Community · Service</span></div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

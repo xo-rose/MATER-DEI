@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0A1F44" />
+    <meta name="description" content="Learn about Mater Dei Cathedral Parish, a Catholic community united in faith and open to all." />
+    <title>About the Parish | Mater Dei Cathedral</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { colors: { parish: { blue: "#0A1F44", red: "#B52D43", ivory: "#F8F6F0", gold: "#D4AF37" } }, fontFamily: { sans: ["Montserrat", "sans-serif"], display: ["Montserrat", "sans-serif"] } } } };
+    </script>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="font-sans antialiased text-slate-900">
+    <header class="site-header absolute inset-x-0 top-0 z-20">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12" aria-label="Main navigation">
+        <a href="../index.html" class="brand flex items-center gap-3" aria-label="Mater Dei Cathedral Parish home">
+          <img src="../assets/mater-dei-logo.jpg" alt="Mater Dei Cathedral Parish logo" class="brand-logo h-12 w-12 rounded-full object-cover sm:h-14 sm:w-14" />
+          <span class="leading-tight text-white"><span class="block font-display text-lg font-semibold sm:text-xl">Mater Dei</span><span class="block text-[0.65rem] font-semibold uppercase tracking-[0.19em] text-white/75 sm:text-xs">Cathedral Parish</span></span>
+        </a>
+        <button id="menu-toggle" class="menu-toggle rounded-md p-2 text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-parish-gold lg:hidden" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu">
+          <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+        <div id="site-menu" class="site-menu hidden lg:flex lg:items-center lg:gap-6">
+          <a class="nav-link" href="../index.html">Home</a>
+          <a class="nav-link" href="about.html" aria-current="page">About</a>
+          <a class="nav-link" href="mass-times.html">Mass Times</a>
+          <a class="nav-link" href="parish-life.html">Parish Life</a>
+          
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-cta" href="mass-times.html">Plan your visit <span aria-hidden="true">→</span></a>
+        </div>
+      </nav>
+    </header>
+    <main class="about-page">
+      <section class="about-page-hero" aria-labelledby="about-title">
+        <img src="../assets/MDCP.jpg" alt="The exterior of Mater Dei Cathedral" class="about-hero-image" fetchpriority="high" />
+        <div class="about-hero-overlay" aria-hidden="true"></div>
+        <div class="about-hero-content">
+          <p class="about-eyebrow"><a href="../index.html">Home</a><span aria-hidden="true">/</span> About the parish</p>
+          <h1 id="about-title">A place of excellence.<br /><span>A home for all.</span></h1>
+          <p>A Catholic community gathered in prayer, united in faith, and open to all who seek a place to belong.</p>
+        </div>
+      </section>
+      <section class="about-intro" aria-labelledby="about-intro-title">
+        <div class="about-intro-inner">
+          <div class="about-intro-label"><p class="section-eyebrow"><span></span> Our parish</p></div>
+          <div class="about-intro-copy">
+            <h2 id="about-intro-title">Rooted in faith, welcoming in spirit.</h2>
+            <p>At Mater Dei Cathedral Parish, we come together to worship God, celebrate the sacraments, and accompany one another on our journey of faith. Whether you are a longtime parishioner or visiting for the first time, we are glad you are here.</p>
+            <p>Our parish life is shaped by prayer, community, and a shared call to serve with compassion.</p>
+            <a class="about-cta" href="mass-times.html">Join us for Mass <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+      <section class="about-values" aria-labelledby="about-values-title">
+        <div class="about-values-inner">
+          <div class="about-values-heading">
+            <p class="section-eyebrow"><span></span> What brings us together</p>
+            <h2 id="about-values-title">A shared life of faith.</h2>
+          </div>
+          <div class="about-values-grid">
+            <article><span class="about-value-number">01</span><h3>Prayer &amp; worship</h3><p>We gather to praise God, hear the Word, and celebrate the Eucharist.</p></article>
+            <article><span class="about-value-number">02</span><h3>Faith &amp; belonging</h3><p>We welcome one another as members of one parish family.</p></article>
+            <article><span class="about-value-number">03</span><h3>Compassion &amp; service</h3><p>We seek to put our faith into action through care for our neighbors.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="about-facts" aria-labelledby="about-facts-title"><div class="about-facts-inner"><div><p class="section-eyebrow"><span></span> Cathedral details</p><h2 id="about-facts-title">Mater Dei at a glance.</h2></div><dl class="about-facts-list"><div><dt>Location</dt><dd>Umuahia, Abia, Nigeria</dd></div><div><dt>Diocese</dt><dd>Diocese of Umuahia</dd></div><div><dt>Rite</dt><dd>Roman (Latin)</dd></div><div><dt>Patron</dt><dd>BVM Mother of God</dd></div><div><dt>Bishop</dt><dd>Michael Kalu Ukpong</dd></div></dl><p class="about-facts-source">Church details: <a href="https://gcatholic.org/churches/africa/3054" target="_blank" rel="noopener">GCatholic.org</a> (listing last updated 17 August 2026).</p></div></section>    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-main"><a class="footer-brand" href="../index.html" aria-label="Mater Dei Cathedral Parish home"><img src="../assets/mater-dei-logo.jpg" alt="" width="52" height="52" /><span><strong>Mater Dei</strong><small>Cathedral Parish</small></span></a><p class="footer-welcome">A place of excellence. Rooted in faith and united in Christ, we look forward to welcoming you.</p></div>
+        <nav class="footer-column" aria-label="Explore"><h2>Explore</h2><a href="about.html">About the parish</a><a href="parish-life.html">Parish life</a><a href="events.html">Events</a><a href="gallery.html">Gallery</a></nav>
+        <nav class="footer-column" aria-label="Worship"><h2>Worship</h2><a href="mass-times.html">Mass times</a><a href="sacraments.html">Sacraments</a><a href="sacraments.html#reconciliation">Reconciliation</a></nav>
+        <div class="footer-column footer-contact"><h2>We’re glad you’re here</h2><p>Have a question or planning a visit? We’d be happy to hear from you.</p><a class="footer-contact-link" href="contact.html">Contact the parish <span aria-hidden="true">→</span></a></div>
+      </div>
+      <div class="footer-bottom"><p>© <span id="current-year">2026</span> Mater Dei Cathedral Parish</p><span>Worship · Community · Service</span></div>
+    </footer>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
+
+
+
+
+

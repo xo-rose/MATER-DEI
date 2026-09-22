@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0A1F44" />
+    <meta name="description" content="Find Mass and Reconciliation schedule information for Mater Dei Cathedral Parish." />
+    <title>Mass Times | Mater Dei Cathedral Parish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { colors: { parish: { blue: "#0A1F44", red: "#B52D43", ivory: "#F8F6F0", gold: "#D4AF37" } }, fontFamily: { sans: ["Montserrat", "sans-serif"], display: ["Montserrat", "sans-serif"] } } } };
+    </script>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="font-sans antialiased text-slate-900">
+    <header class="site-header absolute inset-x-0 top-0 z-20">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12" aria-label="Main navigation">
+        <a href="../index.html" class="brand flex items-center gap-3" aria-label="Mater Dei Cathedral Parish home"><img src="../assets/mater-dei-logo.jpg" alt="Mater Dei Cathedral Parish logo" class="brand-logo h-12 w-12 rounded-full object-cover sm:h-14 sm:w-14" /><span class="leading-tight text-white"><span class="block font-display text-lg font-semibold sm:text-xl">Mater Dei</span><span class="block text-[0.65rem] font-semibold uppercase tracking-[0.19em] text-white/75 sm:text-xs">Cathedral Parish</span></span></a>
+        <button id="menu-toggle" class="menu-toggle rounded-md p-2 text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-parish-gold lg:hidden" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu"><svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" /></svg></button>
+        <div id="site-menu" class="site-menu hidden lg:flex lg:items-center lg:gap-6"><a class="nav-link" href="../index.html">Home</a><a class="nav-link" href="about.html">About</a><a class="nav-link" href="mass-times.html" aria-current="page">Mass Times</a><a class="nav-link" href="parish-life.html">Parish Life</a>
+          <a class="nav-link" href="contact.html">Contact</a><a class="nav-cta" href="mass-times.html">Plan your visit <span aria-hidden="true">→</span></a></div>
+      </nav>
+    </header>
+    <main class="mass-page">
+      <section class="mass-page-hero" aria-labelledby="mass-title">
+        <img src="../assets/MDCP.jpg" alt="Mater Dei Cathedral" class="mass-hero-image" fetchpriority="high" /><div class="mass-hero-overlay" aria-hidden="true"></div>
+        <div class="mass-hero-content"><p class="about-eyebrow"><a href="../index.html">Home</a><span aria-hidden="true">/</span> Mass times</p><h1 id="mass-title">Come and worship<br /><span>with us.</span></h1><p>The Mass is at the heart of our parish life. We look forward to welcoming you.</p></div>
+      </section>
+      <section class="mass-schedule" aria-labelledby="schedule-title">
+        <div class="mass-schedule-inner">
+          <div class="mass-schedule-heading"><p class="section-eyebrow"><span></span> Plan your visit</p><h2 id="schedule-title">Worship schedule</h2><p>Join us for Holy Mass throughout the week. All are welcome to worship with us.</p></div>
+          <div class="schedule-layout">
+            <section class="service-panel sunday-panel" aria-labelledby="sunday-title">
+              <div class="service-panel-heading"><p class="schedule-label">Every Sunday</p><h3 id="sunday-title">Sunday Masses</h3></div>
+              <ul class="service-times">
+                <li><time>6:30 am</time><span>Igbo Mass</span></li>
+                <li><time>8:30 am</time><span>English Mass</span></li>
+                <li><time>8:30 am</time><span>Children’s Mass <small>Underground chapel</small></span></li>
+                <li><time>10:30 am</time><span>Igbo Mass</span></li>
+                <li><time>5:00 pm</time><span>Evening Mass</span></li>
+              </ul>
+            </section>
+            <div class="service-sidebar">
+              <section class="service-panel" aria-labelledby="weekday-title">
+                <div class="service-panel-heading"><p class="schedule-label">Monday–Saturday</p><h3 id="weekday-title">Weekday Masses</h3></div>
+                <ul class="service-times compact-times">
+                  <li><time>6:30 am</time><span>Weekday Mass</span></li>
+                  <li><time>6:15 am</time><span>On cleanup days</span></li>
+                </ul>
+              </section>
+              <section class="service-panel confession-panel" aria-labelledby="confession-title">
+                <div class="service-panel-heading"><p class="schedule-label">The Sacrament of Reconciliation</p><h3 id="confession-title">Confession</h3></div>
+                <p class="confession-time"><strong>Every Saturday</strong><span>After morning Mass</span></p>
+              </section>
+            </div>
+          </div>          <div class="schedule-contact"><p>Need current information before your visit?</p><a href="contact.html">Contact the parish <span aria-hidden="true">→</span></a></div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="footer-inner"><div class="footer-main"><a class="footer-brand" href="../index.html" aria-label="Mater Dei Cathedral Parish home"><img src="../assets/mater-dei-logo.jpg" alt="" width="52" height="52" /><span><strong>Mater Dei</strong><small>Cathedral Parish</small></span></a><p class="footer-welcome">A place of excellence. Rooted in faith and united in Christ, we look forward to welcoming you.</p></div><nav class="footer-column" aria-label="Explore"><h2>Explore</h2><a href="about.html">About the parish</a><a href="parish-life.html">Parish life</a><a href="events.html">Events</a><a href="gallery.html">Gallery</a></nav><nav class="footer-column" aria-label="Worship"><h2>Worship</h2><a href="mass-times.html">Mass times</a><a href="sacraments.html">Sacraments</a><a href="sacraments.html#reconciliation">Reconciliation</a></nav><div class="footer-column footer-contact"><h2>We’re glad you’re here</h2><p>Have a question or planning a visit? We’d be happy to hear from you.</p><a class="footer-contact-link" href="contact.html">Contact the parish <span aria-hidden="true">→</span></a></div></div><div class="footer-bottom"><p>© <span id="current-year">2026</span> Mater Dei Cathedral Parish</p><span>Worship · Community · Service</span></div></footer>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
+
+
+
+
+
