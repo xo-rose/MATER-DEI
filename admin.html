@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0A1F44" />
+    <link rel="icon" href="assets/mater-dei-logo.jpg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="assets/mater-dei-logo.jpg" />
+    <meta name="description" content="Prepare Sunday themes and parish announcements for the Mater Dei website." />
+    <title>Parish Updates Editor | Mater Dei</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{colors:{parish:{blue:"#0A1F44",red:"#B52D43",ivory:"#F8F6F0",gold:"#D4AF37"}},fontFamily:{sans:["Montserrat","sans-serif"],display:["Montserrat","sans-serif"]}}}};</script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="font-sans antialiased text-slate-900">
+    <header class="admin-header"><a href="index.html" class="footer-brand"><img src="assets/mater-dei-logo.jpg" alt="" width="52" height="52"/><span><strong>Mater Dei</strong><small>Parish Updates</small></span></a><a href="pages/announcements.html">View public announcements <span aria-hidden="true">→</span></a></header>
+    <main class="admin-page"><div class="admin-page-inner"><p class="section-eyebrow"><span></span> Parish website</p><h1>Prepare Sunday updates.</h1><p class="admin-intro">Enter the Sunday theme, readings, and announcements. Download the update file, then replace <code>data/parish-updates.json</code> in the website project and push the change to GitHub to publish it.</p>
+      <form id="updates-form" class="updates-form">
+        <label>Sunday date<input id="update-week" name="weekOf" type="date" /></label>
+        <label>Sunday theme<input id="update-theme" name="theme" type="text" maxlength="160" placeholder="For example: Called to serve" /></label>
+        <label>Readings or theme notes <span class="form-optional">(optional)</span><input id="update-readings" name="readings" type="text" maxlength="240" placeholder="Optional short note" /></label>
+        <label>Parish announcements <span class="form-optional">(one announcement per line)</span><textarea id="update-announcements" name="announcements" rows="8" placeholder="Type each Sunday announcement on a new line"></textarea></label>
+        <div class="admin-actions"><button class="admin-button admin-button-secondary" id="save-draft" type="button">Save draft on this device</button><button class="admin-button" type="submit">Download update file</button></div>
+        <p class="admin-status" id="admin-status" role="status" aria-live="polite"></p>
+      </form>
+      <aside class="admin-note"><strong>How publishing works:</strong> This parish website is hosted as static files, so this editor cannot publish directly or provide secure sign-in. It saves drafts only in this browser and downloads a file for you to add to the project before committing and pushing. The editor page itself is not password protected, so do not enter private information.</aside>
+    </div></main>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

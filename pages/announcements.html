@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0A1F44" />
+    <link rel="icon" href="../assets/mater-dei-logo.jpg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="../assets/mater-dei-logo.jpg" />
+    <meta name="description" content="The Sunday theme and parish announcements for Mater Dei Cathedral Parish." />
+    <title>Sunday Announcements | Mater Dei Cathedral Parish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{colors:{parish:{blue:"#0A1F44",red:"#B52D43",ivory:"#F8F6F0",gold:"#D4AF37"}},fontFamily:{sans:["Montserrat","sans-serif"],display:["Montserrat","sans-serif"]}}}};</script>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="font-sans antialiased text-slate-900">
+    <header class="site-header absolute inset-x-0 top-0 z-20"><nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12" aria-label="Main navigation">
+      <a href="../index.html" class="brand flex items-center gap-3" aria-label="Mater Dei Cathedral Parish home"><img src="../assets/mater-dei-logo.jpg" alt="Mater Dei Cathedral Parish logo" class="brand-logo h-12 w-12 rounded-full object-cover sm:h-14 sm:w-14"/><span class="leading-tight text-white"><span class="block font-display text-lg font-semibold sm:text-xl">Mater Dei</span><span class="block text-[0.65rem] font-semibold uppercase tracking-[0.19em] text-white/75 sm:text-xs">Cathedral Parish</span></span></a>
+      <a class="nav-link" href="../index.html">Back to Home</a>
+    </nav></header>
+    <main class="announcements-page" data-parish-updates data-updates-url="../data/parish-updates.json">
+      <section class="announcements-hero"><div class="announcements-hero-inner"><p class="about-eyebrow"><a href="../index.html">Home</a><span aria-hidden="true">/</span> Sunday announcements</p><p class="section-eyebrow"><span></span> Parish notices</p><h1>Gather in faith.<br/><span>Stay connected.</span></h1><p>Our Sunday theme and the latest announcements for the parish community.</p></div></section>
+      <section class="announcements-content" aria-labelledby="announcement-theme-title"><div class="announcements-content-inner"><p class="announcement-date" data-update-date></p><p class="sunday-theme-label">Sunday theme</p><h2 id="announcement-theme-title" data-update-theme>Announcements will be posted here.</h2><p class="announcement-readings" data-update-readings></p><div class="announcement-list-wrap"><h3>Parish announcements</h3><ul class="sunday-announcements" data-update-announcements></ul><p class="announcement-empty" data-update-empty>There are no announcements posted yet. Please check back soon.</p></div><a class="about-cta" href="../pages/mass-times.html">View Mass times <span aria-hidden="true">→</span></a></div></section>
+    </main>
+    <footer class="site-footer"><div class="footer-inner"><div class="footer-main"><a class="footer-brand" href="../index.html" aria-label="Mater Dei Cathedral Parish home"><img src="../assets/mater-dei-logo.jpg" alt="" width="52" height="52"/><span><strong>Mater Dei</strong><small>Cathedral Parish</small></span></a><p class="footer-welcome">A place of excellence. Rooted in faith and united in Christ, we look forward to welcoming you.</p></div><nav class="footer-column" aria-label="Explore"><h2>Explore</h2><a href="about.html">About the parish</a><a href="parish-life.html">Parish life</a><a href="events.html">Events</a><a href="gallery.html">Gallery</a></nav><nav class="footer-column" aria-label="Worship"><h2>Worship</h2><a href="mass-times.html">Mass times</a><a href="sacraments.html">Sacraments</a><a href="announcements.html">Sunday announcements</a></nav><div class="footer-column footer-contact"><h2>We’re glad you’re here</h2><p>Have a question or planning a visit? We’d be happy to hear from you.</p><a class="footer-contact-link" href="contact.html">Contact the parish <span aria-hidden="true">→</span></a></div></div><div class="footer-bottom"><p>© <span id="current-year">2026</span> Mater Dei Cathedral Parish</p><span>Worship · Community · Service</span></div></footer>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

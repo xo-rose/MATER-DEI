@@ -44,3 +44,30 @@ if (lightbox && lightboxImage) {
     lightboxImage.alt = '';
   });
 }
+
+document.querySelectorAll('[data-parish-updates]').forEach((section) => {
+  fetch(section.dataset.updatesUrl)
+    .then((response) => response.ok ? response.json() : Promise.reject(new Error('Updates unavailable')))
+    .then((updates) => {
+      const dateElement = section.querySelector('[data-update-date]');
+      const themeElement = section.querySelector('[data-update-theme]');
+      const readingsElement = section.querySelector('[data-update-readings]');
+      const list = section.querySelector('[data-update-announcements]');
+      const empty = section.querySelector('[data-update-empty]');
+      if (updates.weekOf && dateElement) {
+        const date = new Date(`${updates.weekOf}T12:00:00`);
+        dateElement.textContent = `Sunday, ${date.toLocaleDateString('en-NG', { day: 'numeric', month: 'long', year: 'numeric' })}`;
+      }
+      if (updates.theme && themeElement) themeElement.textContent = updates.theme;
+      if (updates.readings && readingsElement) readingsElement.textContent = updates.readings;
+      if (list && Array.isArray(updates.announcements)) {
+        list.replaceChildren(...updates.announcements.map((announcement) => {
+          const item = document.createElement('li');
+          item.textContent = announcement;
+          return item;
+        }));
+        if (empty) empty.hidden = updates.announcements.length > 0;
+      }
+    })
+    .catch(() => {});
+});
