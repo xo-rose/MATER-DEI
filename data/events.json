@@ -7,5 +7,14 @@
     "location": "Marian Shrine, Mater Dei",
     "image": "/assets/hca.jpeg",
     "published": true
+  },
+  {
+    "title": "Catechetical Week",
+    "date": "2026-10-04",
+    "endDate": "2026-10-10",
+    "time": "4pm",
+    "location": "Mater Dei",
+    "image": "/assets/cathe-2.jpeg",
+    "published": true
   }
 ]
