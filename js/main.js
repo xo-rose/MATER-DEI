@@ -51,6 +51,7 @@ document.querySelectorAll('[data-parish-updates]').forEach((section) => {
     .then((updates) => {
       const dateElement = section.querySelector('[data-update-date]');
       const themeElement = section.querySelector('[data-update-theme]');
+      const themeImageElement = section.querySelector('[data-update-theme-image]');
       const readingsElement = section.querySelector('[data-update-readings]');
       const list = section.querySelector('[data-update-announcements]');
       const empty = section.querySelector('[data-update-empty]');
@@ -58,7 +59,17 @@ document.querySelectorAll('[data-parish-updates]').forEach((section) => {
         const date = new Date(`${updates.weekOf}T12:00:00`);
         dateElement.textContent = `Sunday, ${date.toLocaleDateString('en-NG', { day: 'numeric', month: 'long', year: 'numeric' })}`;
       }
-      if (updates.theme && themeElement) themeElement.textContent = updates.theme;
+      if (themeElement) {
+        if (updates.theme) themeElement.textContent = updates.theme;
+        themeElement.hidden = !updates.theme && Boolean(updates.themeImage);
+      }
+      if (updates.themeImage && themeImageElement) {
+        const updatesUrl = new URL(section.dataset.updatesUrl, window.location.href);
+        const siteRoot = new URL('../', updatesUrl);
+        themeImageElement.src = new URL(String(updates.themeImage).replace(/^\/+/, ''), siteRoot).href;
+        themeImageElement.alt = updates.theme ? `Sunday theme: ${updates.theme}` : 'Sunday theme artwork';
+        themeImageElement.hidden = false;
+      }
       if (updates.readings && readingsElement) readingsElement.textContent = updates.readings;
       if (list && Array.isArray(updates.announcements)) {
         list.replaceChildren(...updates.announcements.map((announcement) => {

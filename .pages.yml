@@ -20,6 +20,9 @@ content:
       - name: theme
         label: Sunday theme
         type: string
+      - name: themeImage
+        label: Sunday theme image
+        type: image
       - name: readings
         label: Readings or theme notes
         type: text

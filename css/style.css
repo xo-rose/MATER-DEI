@@ -213,6 +213,8 @@ body { margin: 0; background: #f8f6f0; }
 .announcements-hero-inner > p:last-child { max-width: 36rem; margin: 1rem 0 0; color: rgba(255,250,240,.78); font-size: .98rem; line-height: 1.8; }
 .announcements-content { background: #f6f2e9; padding: 4.5rem 1.5rem 5rem; }
 .announcements-content-inner { max-width: 54rem; margin: 0 auto; }
+.announcement-theme-image { display: block; width: 100%; max-height: 42rem; margin: 1.5rem 0 0; border-radius: .9rem; object-fit: contain; background: #fff; }
+.announcement-theme-image[hidden] { display: none; }
 .announcements-content h2 { margin: 0; color: #0A1F44; font-size: clamp(2rem,4vw,3.2rem); font-weight: 600; line-height: 1.2; }
 .announcement-list-wrap { margin-top: 2.5rem; border-top: 1px solid #ddd4c5; padding-top: 1.5rem; }
 .announcement-list-wrap h3 { margin: 0; color: #0A1F44; font-size: 1.35rem; font-weight: 700; }
@@ -449,6 +451,7 @@ body { margin: 0; background: #f8f6f0; }
 /* Parish contact information and cathedral facts */
 .contact-details-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; margin-top: 1.75rem; }
 .contact-detail-card { display: flex; min-height: 10rem; align-items: flex-start; gap: 1.1rem; border: 1px solid #e1d8c9; border-radius: .9rem; background: #ede6d9; padding: 1.5rem; }
+.contact-facebook-icon { font-size: 2rem; font-weight: 800; }
 .contact-detail-label { margin: .1rem 0 .45rem; color: #826200; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .contact-detail-card h3 { margin: 0; color: #0A1F44; font-size: 1.2rem; font-weight: 700; }
 .contact-detail-card h3 a { color: inherit; text-decoration: none; }
@@ -496,7 +499,6 @@ body { margin: 0; background: #f8f6f0; }
 .event-card-content h3 { margin: 0; color: #0A1F44; font-size: 1.18rem; font-weight: 700; line-height: 1.4; }
 .event-card-details { margin: .55rem 0 0; color: #826200; font-size: .78rem; font-weight: 600; line-height: 1.5; }
 .event-card-description { margin: .7rem 0 0; color: #626c78; font-size: .84rem; line-height: 1.7; }
-.footer-facebook-link { margin-top: .15rem; }
 .cms-login-button { display: inline-flex; align-items: center; gap: .55rem; margin-top: .35rem; text-decoration: none; }
 @media (max-width: 760px) { .events-published-list,.events-page-published-list { grid-template-columns: 1fr; } }
 
