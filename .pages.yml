@@ -43,9 +43,12 @@ content:
         type: string
         required: true
       - name: date
-        label: Date
+        label: Start date
         type: date
         required: true
+      - name: endDate
+        label: End date
+        type: date
       - name: time
         label: Time
         type: string

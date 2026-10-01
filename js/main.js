@@ -103,7 +103,7 @@ document.querySelectorAll('[data-events-list]').forEach((list) => {
       const now = new Date();
       const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
       const upcoming = events
-        .filter((event) => event && event.published !== false && event.title && event.date && event.date >= today)
+        .filter((event) => event && event.published !== false && event.title && event.date && (event.endDate || event.date) >= today)
         .sort((first, second) => first.date.localeCompare(second.date));
       const limit = Number(list.dataset.eventLimit) || upcoming.length;
       const visibleEvents = upcoming.slice(0, limit);
@@ -128,9 +128,12 @@ document.querySelectorAll('[data-events-list]').forEach((list) => {
         content.className = 'event-card-content';
         const dateLabel = document.createElement('p');
         dateLabel.className = 'event-card-date';
-        dateLabel.textContent = new Date(`${event.date}T12:00:00`).toLocaleDateString('en-NG', {
-          weekday: 'short', day: 'numeric', month: 'long', year: 'numeric',
-        });
+        const dateFormat = { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric' };
+        const startDateLabel = new Date(`${event.date}T12:00:00`).toLocaleDateString('en-NG', dateFormat);
+        const endDateLabel = event.endDate && event.endDate !== event.date
+          ? new Date(`${event.endDate}T12:00:00`).toLocaleDateString('en-NG', dateFormat)
+          : '';
+        dateLabel.textContent = endDateLabel ? `${startDateLabel} – ${endDateLabel}` : startDateLabel;
         const title = document.createElement('h3');
         title.textContent = event.title;
         content.append(dateLabel, title);
