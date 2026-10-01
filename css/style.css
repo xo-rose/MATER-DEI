@@ -484,6 +484,22 @@ body { margin: 0; background: #f8f6f0; }
 .history-sources a { color: #725400; }
 @media (max-width: 600px) { .parish-history { padding: 4rem 1.25rem; } .history-timeline::before { left: .32rem; } .history-timeline li { grid-template-columns: 1fr; gap: .25rem; padding-left: 1.6rem; padding-bottom: 1.3rem; } .history-timeline li::before { top: .35rem; left: 0; } .history-year { text-align: left; } }
 
+/* CMS-published events and Facebook link */
+.events-published-list { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; }
+.events-published-list > [data-event-empty][hidden] { display: none; }
+.events-page-published-list { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.events-page-published-list > [data-event-empty] { grid-column: 1 / -1; }
+.event-card { overflow: hidden; border: 1px solid #e3dccf; border-radius: .9rem; background: #f8f6f0; box-shadow: 0 12px 32px rgba(21,54,91,.06); }
+.event-card-image { display: block; width: 100%; aspect-ratio: 16/9; background: #e7e2d8; object-fit: cover; }
+.event-card-content { padding: 1.25rem; }
+.event-card-date { margin: 0 0 .55rem; color: #8e3241; font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.event-card-content h3 { margin: 0; color: #0A1F44; font-size: 1.18rem; font-weight: 700; line-height: 1.4; }
+.event-card-details { margin: .55rem 0 0; color: #826200; font-size: .78rem; font-weight: 600; line-height: 1.5; }
+.event-card-description { margin: .7rem 0 0; color: #626c78; font-size: .84rem; line-height: 1.7; }
+.footer-facebook-link { margin-top: .15rem; }
+.cms-login-button { display: inline-flex; align-items: center; gap: .55rem; margin-top: .35rem; text-decoration: none; }
+@media (max-width: 760px) { .events-published-list,.events-page-published-list { grid-template-columns: 1fr; } }
+
 /* Active page treatment in the primary navigation */
 .nav-link[aria-current="page"] { color: #E8C54A; }
 @media (min-width: 1024px) { .nav-link[aria-current="page"] { position: relative; } .nav-link[aria-current="page"]::after { position: absolute; right: 0; bottom: -.6rem; left: 0; height: 2px; border-radius: 2px; background: #D4AF37; content: ''; } }

@@ -1,0 +1,75 @@
+media:
+  - name: parish-images
+    label: Parish images
+    input: assets
+    output: /assets
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp]
+    rename: safe
+
+content:
+  - name: sunday-updates
+    label: Sunday announcements
+    type: file
+    path: data/parish-updates.json
+    format: json
+    fields:
+      - name: weekOf
+        label: Sunday date
+        type: date
+      - name: theme
+        label: Sunday theme
+        type: string
+      - name: readings
+        label: Readings or theme notes
+        type: text
+      - name: announcements
+        label: Parish announcements
+        type: text
+        list: true
+
+  - name: events
+    label: Parish events
+    type: file
+    path: data/events.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Event name
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: time
+        label: Time
+        type: string
+      - name: location
+        label: Location
+        type: string
+      - name: description
+        label: Details
+        type: text
+      - name: image
+        label: Event image
+        type: image
+      - name: published
+        label: Show on the website
+        type: boolean
+
+  - name: site-settings
+    label: Parish links
+    type: file
+    path: data/site-settings.json
+    format: json
+    fields:
+      - name: facebookUrl
+        label: Facebook page URL
+        type: string
+        required: true
+
+settings:
+  commit:
+    identity: user
